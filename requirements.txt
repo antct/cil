@@ -1,0 +1,7 @@
+accelerate==0.3.0
+nlpaug==1.1.2
+torch==1.7.1
+tqdm==4.50.2
+transformers==3.4.0
+matplotlib==3.3.2
+seaborn==0.11.0

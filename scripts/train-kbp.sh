@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=0,1 accelerate launch --config_file ddp.yaml main.py \
+    --mode train \
+    --dataset kbp \
+    --model_name exp \
+    --bag_size 3 \
+    --max_bag_size 10 \
+    --lr 2e-5 \
+    --train_batch_size 16 \
+    --eval_batch_size 8 \
+    --max_epoch 3 \
+    --warmup_steps 250 \
+    --max_steps 100000 \
+    --dropout_prob 0.0 \
+    --temperature 0.05 \
+    --max_grad_norm 5.0 \
+    --save_steps 500 \
+    --seed $1
